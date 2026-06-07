@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ezmush Bakers - Premium Cakes, Pastries & Fresh Baked Goods delivered across Pakistan. Order now via WhatsApp." />
+  <meta name="keywords" content="bakery Pakistan, cakes Lahore, pastries, order cake online, Ezmush Bakers" />
+  <title>Ezmush Bakers - Premium Bakery in Pakistan</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">Ezmush Bakers</div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===================== TOPBAR ===================== -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span><i class="fa-solid fa-phone"></i> +92 300 1234567</span>
+      <span><i class="fa-brands fa-whatsapp"></i> WhatsApp Orders Available</span>
+      <span><i class="fa-solid fa-truck"></i> Free Delivery on Orders Above Rs. 2,500</span>
+    </div>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon"><i class="fa-solid fa-wheat-awn"></i></span>
+        <span class="logo-text">Ezmush <em>Bakers</em></span>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="nav-search" id="navSearch">
+        <input type="text" id="searchInput" placeholder="Search for cakes, pastries..." />
+        <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="search-results" id="searchResults"></div>
+      </div>
+
+      <!-- Nav Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="search-toggle" id="searchToggle" aria-label="Toggle search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <a href="https://wa.me/923001234567" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> Order Now
+        </a>
+        <button class="cart-btn" id="cartBtn" aria-label="Shopping cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== CART SIDEBAR ===================== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Basket</h3>
+      <button id="cartClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <p class="cart-empty">Your basket is empty.</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        Total: <strong id="cartTotal">Rs. 0</strong>
+      </div>
+      <a href="https://wa.me/923001234567" class="btn btn-whatsapp btn-full" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+      </a>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=1600&q=80" alt="Premium baked goods" class="hero-img" loading="eager" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-badge">Est. 2010 — Lahore, Pakistan</div>
+        <h1 class="hero-title">
+          Baked with Love,<br />
+          <em>Crafted for Every</em><br />
+          Celebration
+        </h1>
+        <p class="hero-subtitle">
+          From classic cakes to artisan breads and delicate pastries — every bite at Ezmush Bakers tells a story of tradition, quality, and care. Serving Pakistan since 2010.
+        </p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary">Explore Our Menu</a>
+          <a href="https://wa.me/923001234567" class="btn btn-outline-light" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>10,000+</strong>
+            <span>Happy Customers</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>50+</strong>
+            <span>Signature Recipes</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>6</strong>
+            <span>Cities Served</span>
+          </div>
+        </div>
+      </div>
+      <a href="#products" class="hero-scroll">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ANNOUNCEMENT RIBBON -->
+    <div class="ribbon">
+      <div class="ribbon-track">
+        <span>Custom Cakes Available</span>
+        <span class="ribbon-dot"></span>
+        <span>Cash on Delivery</span>
+        <span class="ribbon-dot"></span>
+        <span>Same-Day Delivery in Lahore</span>
+        <span class="ribbon-dot"></span>
+        <span>Eid Special Hampers</span>
+        <span class="ribbon-dot"></span>
+        <span>Corporate Orders Welcome</span>
+        <span class="ribbon-dot"></span>
+        <span>Custom Cakes Available</span>
+        <span class="ribbon-dot"></span>
+        <span>Cash on Delivery</span>
+        <span class="ribbon-dot"></span>
+        <span>Same-Day Delivery in Lahore</span>
+        <span class="ribbon-dot"></span>
+        <span>Eid Special Hampers</span>
+        <span class="ribbon-dot"></span>
+        <span>Corporate Orders Welcome</span>
+        <span class="ribbon-dot"></span>
+      </div>
+    </div>
+
+    <!-- SPECIAL OFFER SECTION -->
+    <section class="offer-section" id="offers">
+      <div class="container">
+        <div class="offer-grid">
+          <div class="offer-card offer-main reveal">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80" alt="Wedding Cake Offer" loading="lazy" />
+            <div class="offer-content">
+              <span class="offer-tag">Special Offer</span>
+              <h3>Wedding & Valima Cakes</h3>
+              <p>Custom-designed multi-tier cakes crafted to match your dream ceremony. Book 7 days ahead and get a complimentary cake tasting session.</p>
+              <a href="https://wa.me/923001234567" class="btn btn-primary" target="_blank" rel="noopener">Book Now</a>
+            </div>
+          </div>
+          <div class="offer-stack">
+            <div class="offer-card offer-small reveal">
+              <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&q=80" alt="Birthday Cake" loading="lazy" />
+              <div class="offer-content">
+                <span class="offer-tag">Birthday Special</span>
+                <h3>Birthday Cakes from Rs. 1,800</h3>
+                <p>Personalised cakes for every age and theme.</p>
+                <a href="#products" class="btn btn-outline">View Menu</a>
+              </div>
+            </div>
+            <div class="offer-card offer-small reveal">
+              <img src="https://images.unsplash.com/photo-1558303240-d1b3eb1b0a63?w=600&q=80" alt="Ramadan Box" loading="lazy" />
+              <div class="offer-content">
+                <span class="offer-tag">Seasonal</span>
+                <h3>Seasonal Gift Boxes</h3>
+                <p>Curated dessert hampers perfect for Eid, Diwali &amp; corporate gifting.</p>
+                <a href="#products" class="btn btn-outline">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section class="categories" id="categories">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Browse by</span>
+          <h2 class="section-title">Our Categories</h2>
+          <p class="section-subtitle">From celebration cakes to everyday treats — we have something for every craving.</p>
+        </div>
+        <div class="category-grid">
+          <div class="category-card reveal" data-filter="all">
+            <div class="cat-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <span>All Items</span>
+          </div>
+          <div class="category-card reveal" data-filter="cakes">
+            <div class="cat-img">
+              <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400&q=80" alt="Cakes" loading="lazy" />
+            </div>
+            <span>Cakes</span>
+          </div>
+          <div class="category-card reveal" data-filter="pastries">
+            <div class="cat-img">
+              <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=400&q=80" alt="Pastries" loading="lazy" />
+            </div>
+            <span>Pastries</span>
+          </div>
+          <div class="category-card reveal" data-filter="cookies">
+            <div class="cat-img">
+              <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&q=80" alt="Cookies" loading="lazy" />
+            </div>
+            <span>Cookies</span>
+          </div>
+          <div class="category-card reveal" data-filter="brownies">
+            <div class="cat-img">
+              <img src="https://images.unsplash.com/photo-1515037893149-de7f840978e2?w=400&q=80" alt="Brownies" loading="lazy" />
+            </div>
+            <span>Brownies</span>
+          </div>
+          <div class="category-card reveal" data-filter="bread">
+            <div class="cat-img">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80" alt="Breads" loading="lazy" />
+            </div>
+            <span>Breads</span>
+          </div>
+          <div class="category-card reveal" data-filter="cupcakes">
+            <div class="cat-img">
+              <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&q=80" alt="Cupcakes" loading="lazy" />
+            </div>
+            <span>Cupcakes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Fresh from the oven</span>
+          <h2 class="section-title">Featured Products</h2>
+          <p class="section-subtitle">Handcrafted daily with premium ingredients. No preservatives, no compromise.</p>
+        </div>
+        <div class="products-grid" id="productsGrid">
+
+          <!-- Product Cards are rendered via JS -->
+
+        </div>
+        <div class="products-cta reveal">
+          <a href="https://wa.me/923001234567" class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> View Full Menu on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-images reveal">
+          <img src="https://images.unsplash.com/photo-1556217477-d325251ece38?w=600&q=80" alt="Baker at work" class="about-img-main" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?w=400&q=80" alt="Freshly baked goods" class="about-img-side" loading="lazy" />
+          <div class="about-badge">
+            <strong>14</strong>
+            <span>Years of Excellence</span>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">Baked in Lahore,<br /><em>Loved Across Pakistan</em></h2>
+          <p>Ezmush Bakers was founded in 2010 in the heart of Lahore with one simple belief — that great baking is an act of love. What started as a small neighbourhood bakery has grown into one of Pakistan's most trusted names in artisan confectionery.</p>
+          <p>Every product we create uses only the finest local and imported ingredients. Our master bakers bring decades of experience to every recipe, whether it's a towering wedding cake or a humble loaf of sourdough.</p>
+          <ul class="about-list">
+            <li><i class="fa-solid fa-check"></i> 100% fresh, baked daily — no frozen products</li>
+            <li><i class="fa-solid fa-check"></i> No artificial preservatives or artificial colours</li>
+            <li><i class="fa-solid fa-check"></i> Halal certified and hygienic preparation</li>
+            <li><i class="fa-solid fa-check"></i> Custom orders accepted for all occasions</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us" id="why">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Why Ezmush</span>
+          <h2 class="section-title">The Ezmush Difference</h2>
+          <p class="section-subtitle">We don't just bake — we create experiences that bring families together.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-icon"><i class="fa-solid fa-seedling"></i></div>
+            <h4>Premium Ingredients</h4>
+            <p>We source the finest local and imported ingredients — Belgian chocolate, fresh dairy, and stone-ground flours.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <h4>Fast Delivery</h4>
+            <p>Same-day delivery available in Lahore. Nationwide delivery to Karachi, Islamabad, Rawalpindi, Gujranwala, Gujrat, and more.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon"><i class="fa-solid fa-money-bill-wave"></i></div>
+            <h4>Cash on Delivery</h4>
+            <p>We offer hassle-free Cash on Delivery (COD) across all major cities. No advance payment required for standard orders.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon"><i class="fa-solid fa-star"></i></div>
+            <h4>Custom Creations</h4>
+            <p>Personalised cakes for weddings, birthdays, corporate events, and every occasion in between — made exactly as you imagine.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>Halal Certified</h4>
+            <p>All our products are prepared in a fully halal-compliant kitchen with strict hygiene and quality control standards.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <h4>Easy WhatsApp Ordering</h4>
+            <p>Skip the hassle. Message us on WhatsApp, browse our menu, place your order, and receive it at your doorstep.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Visual Indulgence</span>
+          <h2 class="section-title">Bakery Gallery</h2>
+          <p class="section-subtitle">Every creation from our kitchen is a work of art. Browse our portfolio of handcrafted masterpieces.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-tall reveal">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="Elegant Wedding Cake" loading="lazy" />
+            <div class="gallery-overlay"><span>Wedding Cake</span></div>
+          </div>
+          <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80" alt="Macarons" loading="lazy" />
+            <div class="gallery-overlay"><span>French Macarons</span></div>
+          </div>
+          <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=80" alt="Birthday Cake" loading="lazy" />
+            <div class="gallery-overlay"><span>Birthday Cakes</span></div>
+          </div>
+          <div class="gallery-item gallery-wide reveal">
+            <img src="https://images.unsplash.com/photo-1558303240-d1b3eb1b0a63?w=900&q=80" alt="Dessert Platter" loading="lazy" />
+            <div class="gallery-overlay"><span>Dessert Platter</span></div>
+          </div>
+          <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=600&q=80" alt="Croissants" loading="lazy" />
+            <div class="gallery-overlay"><span>Butter Croissants</span></div>
+          </div>
+          <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80" alt="Cookies" loading="lazy" />
+            <div class="gallery-overlay"><span>Artisan Cookies</span></div>
+          </div>
+          <div class="gallery-item gallery-tall reveal">
+            <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=600&q=80" alt="Cupcakes" loading="lazy" />
+            <div class="gallery-overlay"><span>Cupcakes</span></div>
+          </div>
+          <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Artisan Bread" loading="lazy" />
+            <div class="gallery-overlay"><span>Artisan Bread</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Customer Love</span>
+          <h2 class="section-title">What Our Customers Say</h2>
+          <p class="section-subtitle">Real words from real Pakistanis who have made Ezmush Bakers a part of their celebrations.</p>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card reveal">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"We ordered our wedding cake from Ezmush and it was absolutely stunning. The three-tier design was exactly what we had envisioned, and the taste was unforgettable. Every guest was asking about it!"</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">SA</div>
+              <div>
+                <strong>Sana Aslam</strong>
+                <span>Lahore</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card reveal">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"The chocolate brownies and red velvet cake are out of this world. I've been ordering from Ezmush every month for the past two years. Their WhatsApp ordering is so convenient and delivery is always on time."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">AK</div>
+              <div>
+                <strong>Ahmed Khalid</strong>
+                <span>Gujranwala</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card reveal">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Ordered birthday cupcakes for my daughter's party. They looked amazing and tasted even better. The presentation was so professional — my daughter's friends couldn't stop talking about them!"</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">NR</div>
+              <div>
+                <strong>Nadia Raza</strong>
+                <span>Islamabad</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card reveal">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+            <p>"Fantastic bakery. We ordered a large corporate hamper for our office Eid gathering and the quality was superb. The packaging was elegant and delivery was right on schedule. Will definitely order again."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">UH</div>
+              <div>
+                <strong>Usman Hanif</strong>
+                <span>Karachi</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card reveal">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Best bakery in Lahore, no doubt. The croissants are flaky and buttery, and the sourdough bread is something else entirely. I buy every week. The COD option makes it very easy to order without worry."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">ZM</div>
+              <div>
+                <strong>Zara Mahmood</strong>
+                <span>Lahore</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card reveal">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Ordered a custom birthday cake with a photo print for my son's first birthday. The quality was incredible and it arrived perfectly on time in Rawalpindi. Highly recommended for anyone in the twin cities!"</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">FI</div>
+              <div>
+                <strong>Farrukh Iqbal</strong>
+                <span>Rawalpindi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter">
+      <div class="container newsletter-inner reveal">
+        <div class="newsletter-text">
+          <h3>Stay Sweet — Subscribe to Our Newsletter</h3>
+          <p>Get exclusive recipes, seasonal promotions, and early access to new products delivered right to your inbox.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact &amp; Order</h2>
+          <p class="section-subtitle">We're always happy to hear from you. Reach out for orders, custom requests, or any enquiry.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Our Bakery</strong>
+                <p>Shop 7, Main Boulevard, Gulberg III, Lahore, Punjab, Pakistan</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <strong>Phone</strong>
+                <p>+92 300 1234567</p>
+                <p>+92 42 35761234</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <strong>WhatsApp Orders</strong>
+                <p>+92 300 1234567</p>
+                <p>Available: 8 AM – 10 PM Daily</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <strong>Email</strong>
+                <p>orders@ezmushbakers.pk</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-truck"></i></div>
+              <div>
+                <strong>Delivery Cities</strong>
+                <p>Lahore, Islamabad, Rawalpindi, Karachi, Gujranwala, Gujrat, Faisalabad, Multan</p>
+              </div>
+            </div>
+            <a href="https://wa.me/923001234567" class="btn btn-whatsapp btn-full" target="_blank" rel="noopener" style="margin-top: 1.5rem;">
+              <i class="fa-brands fa-whatsapp"></i> Chat with Us on WhatsApp
+            </a>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <h3>Send Us a Message</h3>
+            <div class="form-group">
+              <label for="cName">Full Name</label>
+              <input type="text" id="cName" placeholder="e.g. Ahmed Ali" required />
+            </div>
+            <div class="form-group">
+              <label for="cPhone">Phone Number</label>
+              <input type="tel" id="cPhone" placeholder="+92 300 0000000" required />
+            </div>
+            <div class="form-group">
+              <label for="cCity">City</label>
+              <select id="cCity">
+                <option value="">Select your city</option>
+                <option>Lahore</option>
+                <option>Islamabad</option>
+                <option>Rawalpindi</option>
+                <option>Karachi</option>
+                <option>Gujranwala</option>
+                <option>Gujrat</option>
+                <option>Faisalabad</option>
+                <option>Multan</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cMsg">Your Message / Order Details</label>
+              <textarea id="cMsg" rows="4" placeholder="Describe your order or enquiry..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">
+          <span class="logo-icon"><i class="fa-solid fa-wheat-awn"></i></span>
+          <span class="logo-text">Ezmush <em>Bakers</em></span>
+        </a>
+        <p>Crafting moments of joy through the art of baking since 2010. From our Lahore kitchen to your table — with love.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/923001234567" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Our Products</h5>
+        <ul>
+          <li><a href="#products">Wedding Cakes</a></li>
+          <li><a href="#products">Birthday Cakes</a></li>
+          <li><a href="#products">Pastries</a></li>
+          <li><a href="#products">Brownies</a></li>
+          <li><a href="#products">Cookies</a></li>
+          <li><a href="#products">Artisan Breads</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Delivery Info</h5>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Lahore — Same Day</li>
+          <li><i class="fa-solid fa-check"></i> Islamabad &amp; Rawalpindi</li>
+          <li><i class="fa-solid fa-check"></i> Gujranwala &amp; Gujrat</li>
+          <li><i class="fa-solid fa-check"></i> Karachi, Faisalabad</li>
+          <li><i class="fa-solid fa-check"></i> Cash on Delivery</li>
+          <li><i class="fa-solid fa-check"></i> Bank Transfer</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2024 Ezmush Bakers. All Rights Reserved. Lahore, Pakistan.</p>
+        <p>Crafted with care for Pakistan's sweetest moments.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Order on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Order on WhatsApp</span>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
